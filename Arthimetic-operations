@@ -1,0 +1,12 @@
+5 / 2 
+
+5 // 2 ( Integer Division, Floor Division )
+
+10 % 3 ( Modulus )
+
+2 ** 3 ( Exponent )
+
+print ( 'SravanKumar\'s "role"') 
+
+print ('c:\opt\lib\numbers')  [Note: this not prints exact the way it it ]
+print (r'c:\opt\lib\numbers') [Note: "r" means raw string ]
