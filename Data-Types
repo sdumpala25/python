@@ -1,0 +1,33 @@
+Python Data Types:
+
+Numeric
+String
+List
+Tuple
+Dictionary
+
+# Numeric
+- Integer
+- Float
+- Complex numbers
+
+# List  ( Note: Lists are Mutable )
+
+nums = [4,6,8,10,12]
+print(nums)
+
+print(nums[0])
+print(nums[2:4])
+print(nums[1:])
+print(nums[-1])
+
+names = ['sravan', 'kumar', 'dumpala']
+print(names[0])
+
+values = ['sravan',25,'dumpala',18.5]  # ( Note: we can have a list with different types of data )
+
+# list of lists
+miscl = [nums, names]
+
+
+
