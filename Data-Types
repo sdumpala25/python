@@ -11,7 +11,22 @@ Dictionary
 - Float
 - Complex numbers
 
-# List  ( Note: Lists are Mutable )
+## List  ( Note: Lists are Mutable )
+## https://www.programiz.com/python-programming/list
+
+# Empty List
+my_list = []
+
+# List of Integers
+my_list = [1, 2, 3, 4, 5]
+
+# List with mixed data
+my_list = [1, "Hello", 7.9]
+
+# nested List
+my_list = ["hello", [4,8,9], ["This", "is", "nested List"]]
+
+
 
 nums = [4,6,8,10,12]
 print(nums)
