@@ -75,29 +75,99 @@ del my_list[2]
 del my_list[1:5]
 del my_list  # This deletes entire list
 
+# Remove and pop method
+
+my_list = [a, b, c, d, e, f]
+my_list.remove('p')
+
+print(my_list)
+
+my_list = [g, h, i, j, k, l]
+print(my_list.pop(1))
+
+my_list.clear()
+
+# Emptying the List using Del
+list = [{1, 2}, ('a'), ['1.1', '2.2']]
+del list[:]
+print ('List:' list)
+
+# index()
+
+## Find the position of an element in the list
+vowels = ['a', 'e', 'i', 'o', 'i', 'u']
+index = vowels.index('e')
+print('The index of e:', index)
+
+## Find the index of tuple and list inside a list
+random = ['a', ('a', 'b'), [3, 4]]
+
+### index of ('a', 'b')
+index = random.index(('a', 'b'))
+print("The index of ('a', 'b'):", index)
+
+# index of [3, 4]
+index = random.index([3, 4])
+print("The index of [3, 4]:", index)
 
 
+# Count
+## Count the occurrence of an element in the list
+vowels = ['a', 'e', 'i', 'o', 'i', 'u']
+count = vowels.count('i')
+print('The count of i is:', count)
 
+## Count the occurrence of tuple and list inside the list
+random = ['a', ('a', 'b'), ('a', 'b'), [3, 4]]
+count = random.count(('a', 'b'))
+print("The count of ('a', 'b') is:", count)
 
+# Sort
+## Sort a given list
+vowels = ['e', 'a', 'u', 'o', 'i']
+vowels.sort()
+print('Sorted list:', vowels)
 
+## Sort the list in Descending order
+vowels = ['e', 'a', 'u', 'o', 'i']
+vowels.sort(reverse=True)
+print('Sorted list (in Descending):', vowels)
 
+# List Reverse()
 
+## Reverse a List
+os = ['Windows', 'macOS', 'Linux']
+print('Original List:', os)
+os.reverse()
+print('Updated List:', os)
 
-nums = [4,6,8,10,12]
-print(nums)
+## Reverse a List Using Slicing Operator
+os = ['Windows', 'macOS', 'Linux']
+print('Original List:', os)
 
-print(nums[0])
-print(nums[2:4])
-print(nums[1:])
-print(nums[-1])
+#Syntax: reversed_list = os[start:stop:step] 
+reversed_list = os[::-1]
+print('Updated List:', reversed_list)
 
-names = ['sravan', 'kumar', 'dumpala']
-print(names[0])
+## Accessing Individual Elements in Reversed Order
+os = ['Windows', 'macOS', 'Linux']
+for o in reversed(os):
+    print(o)
+    
+# list copy
+## Copying a List
+list = ['cat', 0, 6.7]
+new_list = list.copy()
+new_list.append('dog')
 
-values = ['sravan',25,'dumpala',18.5]  # ( Note: we can have a list with different types of data )
+print('Old List: ', list)
+print('New List: ', new_list)
 
-# list of lists
-miscl = [nums, names]
+## Shallow Copy of a List Using Slicing
+list = ['cat', 0, 6.7]
+new_list = list[:]
+new_list.append('dog')
 
-
-
+# Printing new and old list
+print('Old List: ', list)
+print('New List: ', new_list)
