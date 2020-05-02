@@ -1,4 +1,7 @@
 ## Unlike list, tuples are immutable
+## We generally use tuples for heterogeneous (different) data types. 
+## Since tuples are immutable, iterating through a tuple is faster than with list. So there is a slight performance boost.
+## Tuples that contain immutable elements can be used as a key for a dictionary. With lists, this is not possible.
 
 ## Creating tuples
 
@@ -47,4 +50,75 @@ my_tuple = ('p','e','r','m','i','t')
 print(my_tuple[0])   # 'p' 
 print(my_tuple[5])   # 't'
 
+## Negative Indexing
+my_tuple = ('p', 'e', 'r', 'm', 'i', 't')
+print(my_tuple[-1])
+print(my_tuple[:-6])
 
+## Slicing
+
+my_tuple = ('p','r','o','g','r','a','m','i','z')
+
+# elements 2nd to 4th
+# Output: ('r', 'o', 'g')
+print(my_tuple[1:4])
+
+# elements beginning to 2nd
+# Output: ('p', 'r')
+print(my_tuple[:-7])
+
+# elements 8th to end
+# Output: ('i', 'z')
+print(my_tuple[7:])
+
+# elements beginning to end
+# Output: ('p', 'r', 'o', 'g', 'r', 'a', 'm', 'i', 'z')
+print(my_tuple[:])
+
+
+## Unlike list Tuples are immutable.But, if the element is itself a mutable data type like list, its nested items can be changed.
+my_tuple = (4, 2, 3, [6, 5])
+
+# TypeError: 'tuple' object does not support item assignment
+# my_tuple[1] = 9
+
+# However, item of mutable element can be changed
+my_tuple[3][0] = 9    # Output: (4, 2, 3, [9, 5])
+print(my_tuple)
+
+# Tuples can be reassigned
+my_tuple = ('p', 'r', 'o', 'g', 'r', 'a', 'm', 'i', 'z')
+
+# Output: ('p', 'r', 'o', 'g', 'r', 'a', 'm', 'i', 'z')
+print(my_tuple)
+
+## Concatenation
+# Output: (1, 2, 3, 4, 5, 6)
+print((1, 2, 3) + (4, 5, 6))
+
+## Repeat
+# Output: ('Repeat', 'Repeat', 'Repeat')
+print(("Repeat",) * 3)
+
+## Deleting a Tuple
+we cannot change the elements in a tuple. It means that we cannot delete or remove items from a tuple.
+
+## Count && Index
+my_tuple = ('a', 'p', 'p', 'l', 'e',)
+
+print(my_tuple.count('p'))  # Output: 2
+print(my_tuple.index('l'))  # Output: 3
+
+## Tuple Membership Test
+my_tuple = ('a', 'p', 'p', 'l', 'e',)
+
+# In operation
+print('a' in my_tuple)
+print('b' in my_tuple)
+
+# Not in operation
+print('g' not in my_tuple)
+
+## Iterating Through a Tuple
+for name in ('John', 'Kate'):
+    print("Hello", name)
