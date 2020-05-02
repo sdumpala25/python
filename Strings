@@ -50,4 +50,29 @@ print(my_string)
 my_string = 'python'
 del my_string
 
+### String Operations ###
+
+## Concatenation
+
+var1 = 'Python'
+var2 = 'String'
+print (var1+var2)
+
+## Repetation
+var1 = 'Python'
+print (var1 * 3)
+
+## Membership Testing ( in && not in )
+
+# example (in)
+var1 = 'Python'
+print ('n' in var1) # True
+
+# example 9not in)
+var1 = 'Python'
+print ('N' not in var1) # True
+
+
+
+
 
