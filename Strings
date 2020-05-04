@@ -230,6 +230,64 @@ person = {'age': 23, 'name': 'Adam'}
 # format age
 print("{name}'s age is: {age}".format(**person))
 
+## Dynamic formatting using format()
+
+# dynamic string format template
+string = "{:{fill}{align}{width}}"
+
+print(string.format('cat', fill='*', align='^', width=5)) # passing format codes as arguments
+
+# dynamic float format template
+num = "{:{align}{width}.{precision}f}"
+print(num.format(123.236, align='<', width=8, precision=2)) # passing format codes as arguments
+
+## Type-specific formatting with format() and overriding __format__() method
+''' format() internally calls __format__() for datetime, while format() accesses the attributes of the complex number.
+    You can easily override the __format__() method of any object for custom formatting. '''
+# datetime formatting   
+import datetime
+date = datetime.datetime.now()
+print("It's now: {:%Y/%m/%d %H:%M:%S}".format(date))
+
+# complex number formatting
+complexNumber = 1+2j
+print("Real part: {0.real} and Imaginary part: {0.imag}".format(complexNumber))
+
+# custom __format__() method
+class Person:
+    def __format__(self, format):
+        if(format == 'age'):
+            return '23'
+        return 'None'
+
+print("Adam's age is: {:age}".format(Person()))
+
+## String capitalize
+string = "python is AWesome."
+capitalized_string = string.capitalize()
+print('Old String: ', string)
+print('Capitalized String:', capitalized_string)
+
+## String Center
+# center() Method With Default fillchar
+string = "Python is awesome"
+new_string = string.center(24)
+print("Centered String: ", new_string)
+
+# center() Method With * fillchar
+string = "Python is awesome"
+new_string = string.center(24, '*')
+print("Centered String: ", new_string)
+
+## Lower case using casefold
+string = "PYTHON IS AWESOME"
+print("Lowercase string:", string.casefold()) # print lowercase string
+
+# Comparison using casefold
+
+
+
+
 
 
 
