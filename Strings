@@ -284,6 +284,110 @@ string = "PYTHON IS AWESOME"
 print("Lowercase string:", string.casefold()) # print lowercase string
 
 # Comparison using casefold
+firstString = "der Fluß"
+secondString = "der Fluss"
+
+# ß is equivalent to ss
+if firstString.casefold() == secondString.casefold():
+    print('The strings are equal.')
+else:
+    print('The strings are not equal.')
+
+## String Count
+
+# Count number of occurrences of a given substring
+string = "Python is awesome, isn't it?"
+substring = "is"
+count = string.count(substring)
+print("The count is:", count)
+
+# Count number of occurrences of a given substring using start and end
+string = "Python is awesome, isn't it?"
+substring = "i"
+count = string.count(substring, 8, 25)  # count after first 'i' and before the last 'i'
+print("The count is:", count)
+
+## String endswith
+
+#  endswith() Without start and end Parameters
+text = "Python is easy to learn."
+result = text.endswith('to learn')
+print(result) # returns False
+
+result = text.endswith('to learn.')
+print(result) # returns True
+
+result = text.endswith('Python is easy to learn.')
+print(result) # returns True
+
+#  endswith() With start and end Parameters
+text = "Python programming is easy to learn."
+
+result = text.endswith('learn.', 7) # start parameter: 7 # "programming is easy to learn." string is searched
+print(result)
+
+# Both start and end is provided # start: 7, end: 26 # "programming is easy" string is searched
+result = text.endswith('is', 7, 26)
+print(result) # Returns False
+result = text.endswith('easy', 7, 26)
+print(result) # returns True
+
+## String expandtabs
+# expandtabs() With Different Argument
+str = "xyz\t12345\tabc"
+print('Original String:', str)
+print('Tabsize 2:', str.expandtabs(2)) # tabsize is set to 2
+print('Tabsize 3:', str.expandtabs(3)) # tabsize is set to 3
+print('Tabsize 4:', str.expandtabs(4)) # tabsize is set to 4
+print('Tabsize 5:', str.expandtabs(5)) # tabsize is set to 5
+print('Tabsize 6:', str.expandtabs(6)) # tabsize is set to 6
+
+## String encode
+Note: Since Python 3.0, strings are stored as Unicode,
+i.e. each character in the string is represented by a code point. So, each string is just a sequence of Unicode code points.
+For efficient storage of these strings, the sequence of code points are converted into set of bytes. The process is known as encoding.
+## The popular encodings being utf-8, ascii, etc.
+
+# Encoding with error parameter
+string = 'pythön!'
+print('The encoded version (with ignore) is:', string.encode("ascii", "ignore"))    # ignore error
+print('The encoded version (with replace) is:', string.encode("ascii", "replace"))  # replace error
+
+## String find
+
+# find() With No start and end Argument
+
+quote = 'Let it be, let it be, let it be'
+result = quote.find('let it')
+print("Substring 'let it':", result) # first occurance of 'let it'(case sensitive)
+
+result = quote.find('small')
+print("Substring 'small ':", result)  # find returns -1 if substring not found
+
+if (quote.find('be,') != -1):  # How to use find()
+    print("Contains substring 'be,'")
+else:
+    print("Doesn't contain substring")
+    
+# find() With start and end Arguments
+
+quote = 'Do small things with great love'
+print(quote.find('small things', 10)) # Substring is searched in 'hings with great love'
+print(quote.find('o small ', 10, -1)) # Substring is searched in 'hings with great lov'
+print(quote.find('things ', 6, 20)) # Substring is searched in 'll things with'
+
+## String Index 
+
+# index() With start and end Arguments
+sentence = 'Python programming is fun.'
+print(sentence.index('ing', 10))  # Substring is searched in 'gramming is fun.'
+print(sentence.index('g is', 10, -4)) # Substring is searched in 'gramming is '
+print(sentence.index('fun', 7, 18)) # Substring is searched in 'programming'
+
+
+
+
+
 
 
 
