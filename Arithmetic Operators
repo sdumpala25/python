@@ -1,0 +1,13 @@
+Addition (+)
+Subtraction (-)
+Multiplication (*)
+Divison (/)
+Mod (%)  ( The remainder after dividing )
+Exponentitation ( ** )
+Integer Division ( Divides and rounds down to the nearest Integer )
+
+REFERENCE:
+https://learn.udacity.com/courses/ud1110/lessons/600b26d1-5c9e-4806-a58d-5aa979a391d6/concepts/4e584f79-874a-4189-a574-b3be1ed439c4
+
+NOTE:
+- Have to check and understand about "BIT WISE OPERATORS"
